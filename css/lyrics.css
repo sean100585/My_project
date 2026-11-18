@@ -1,0 +1,104 @@
+/* 歌词页面样式 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Microsoft YaHei", sans-serif;
+    line-height: 2;
+    padding: 0;
+    min-height: 100vh;
+}
+
+/* 各页面独立背景图设置 */
+#suisuiniannian {
+    background-image: url(../images/img-music/岁岁年年1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+#tongluren {
+    background-image: url(../images/img-music/同路人1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+#guangdian {
+    background-image: url(../images/img-music/光点.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+#manzu {
+    background-image: url(../images/img-music/满足1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(255, 255, 255, 0.5); /* 白色半透明背景 */
+    padding: 60px 40px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    text-shadow: 0 1px 2px rgba(255,255,255,0.8); /* 增加文字清晰度 */
+}
+
+.album-info {
+    color: #333;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.lyrics {
+    font-size: 1.2rem;
+    color: #222;
+    white-space: pre-line;
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 0 1px 1px rgba(255,255,255,0.6); /* 歌词文字阴影 */
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 50px;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 8px 16px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    background-color: rgba(255,255,255,0.7);
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    background-color: rgba(255,255,255,1);
+    color: #000;
+    border-color: #999;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .container {
+        padding: 40px 20px;
+        background-color: rgba(255, 255, 255, 0.85); /* 小屏幕增加透明度 */
+    }
+}

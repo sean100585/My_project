@@ -1,0 +1,40 @@
+.page-container {
+    background-image: url(../images/img/11.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 0;
+    padding: 0;
+}
+
+.section {
+    padding: 0;
+    background: var(--bg-light);
+    margin-bottom: 0;
+    border-radius: 0;
+    box-shadow: none;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    opacity: 0; /* 初始隐藏用于滚动动画 */
+    transform: translateY(30px); /* 初始位置用于滚动动画 */
+    transition: var(--transition);
+}
+
+/* 各板块专属样式（统一padding） */
+#about-him, #film-tv, #music, #studio, #fashion, #public-welfare, #honor {
+    padding: 70px 0;
+    background-color: rgba(255, 255, 255, 0.55); /* 轻微透明的白色背景 */
+}
+
+#about-him .section-content, 
+#film-tv .section-content, 
+#music .section-content, 
+#studio .section-content, 
+#fashion .section-content, 
+#public-welfare .section-content, 
+#honor .section-content {
+    padding: 0 5%;
+    max-width: 1500px;
+    margin: 0 auto;
+}

@@ -1,0 +1,103 @@
+/* 导航栏动画效果 */
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 15px 5%;
+    background: rgba(255, 255, 255, 0.85); /* 半透明白色背景 */
+    backdrop-filter: blur(5px); /* 毛玻璃效果 */
+    box-shadow: var(--shadow);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    transition: var(--transition); /* 导航栏过渡动画 */
+    justify-content: space-between;
+}
+
+/* 滚动时导航栏变化 */
+.navbar.scrolled {
+    padding: 10px 5%;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(8px); /* 增强毛玻璃效果 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo动画 */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    width: 50px;
+    height: 38px;
+    overflow: hidden;
+}
+.logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* 图片自适应容器，保持比例不拉伸 */
+    object-position: center; /* 图片居中显示 */
+}
+.logo-text {
+    color: var(--primary); /* 设置为红色主色调 */
+    font-size: 20px; /* 调整字体大小与图片匹配 */
+    line-height: 30px; /* 与图片高度一致 */
+    font-weight: bold;
+}
+
+/* 导航列表动画 */
+.nav-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    margin: 0 18px;
+    position: relative;
+}
+
+.nav-item a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 15px;
+    padding: 8px 0;
+    transition: var(--transition);
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+}
+
+/* 导航下划线动画 */
+.nav-item a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary);
+    transition: var(--transition);
+}
+
+/* 非活跃链接下划线延迟显示，突出活跃状态 */
+.nav-item a:not(.active)::after {
+    transition-delay: 0.1s;
+}
+
+.nav-item a.active,
+.nav-item a:hover {
+    color: var(--primary);
+}
+
+.nav-item a.active::after,
+.nav-item a:hover::after {
+    width: 100%;
+}
+
+.nav-toggle {
+    display: none;
+}

@@ -1,0 +1,137 @@
+/* 滚动显示动画 */
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 标题动画 */
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 35px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+    color: var(--text);
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 80px;
+    height: 2px;
+    background: var(--primary);
+    transition: var(--transition);
+}
+
+.section.visible .section-title::after {
+    width: 290px;
+}
+
+.content-block {
+    margin-bottom: 45px;
+    transition: var(--transition);
+}
+
+.content-block:last-child {
+    margin-bottom: 0;
+}
+
+.content-block h3 {
+    font-size: 1.4rem;
+    margin: 25px 0 18px;
+    color: var(--primary);
+    transition: var(--transition);
+}
+
+.section.visible .content-block h3 {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.content-block h3 {
+    transform: translateX(-20px);
+    opacity: 0;
+    transition-delay: 0.1s;
+}
+
+.content-block p {
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 12px;
+    transition: var(--transition);
+}
+
+.section.visible .content-block p {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.content-block p {
+    transform: translateX(-20px);
+    opacity: 0;
+    transition-delay: 0.2s;
+}
+
+/* 产品卡片悬停动画 */
+.product-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.product-img {
+    transition: var(--transition);
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.08);
+}
+
+/* 卡片依次出现动画 */
+.product-card {
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+.section.visible .product-card {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.product-card:nth-child(1) { transition-delay: 0.1s; }
+.product-card:nth-child(2) { transition-delay: 0.2s; }
+.product-card:nth-child(3) { transition-delay: 0.3s; }
+.product-card:nth-child(4) { transition-delay: 0.4s; }
+.product-card:nth-child(5) { transition-delay: 0.5s; }
+.product-card:nth-child(6) { transition-delay: 0.6s; }
+
+/* 荣誉列表动画 */
+.honor-item {
+    transform: translateY(20px);
+    opacity: 0;
+}
+
+.section.visible .honor-item {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* 荣誉项依次出现动画 */
+.honor-item:nth-child(1) { transition-delay: 0.1s; }
+.honor-item:nth-child(2) { transition-delay: 0.2s; }
+.honor-item:nth-child(3) { transition-delay: 0.3s; }
+.honor-item:nth-child(4) { transition-delay: 0.4s; }
+
+.honor-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid var(--primary);
+}
+
+/* 视频卡片悬停动画 */
+.video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}

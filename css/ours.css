@@ -1,0 +1,114 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    text-align: left;
+    padding: 0; 
+    margin: 0;
+    font-family: "Microsoft YaHei", sans-serif;
+    line-height: 1.8;
+}
+
+/* 专辑内容区域背景图设置 */
+#ours {
+    background-image: url(../images/img-music/我们1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    min-height: 100vh;
+}
+
+.album-intro{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(255,255,255,0.5);
+    padding: 60px 8vw;
+    margin: 0;
+    box-shadow: none;
+}
+/* 标题样式 - 添加album-前缀避免冲突 */
+.album-title{
+    font-size: 2.8rem;
+    color: #1a1a1a;
+    margin: 0 0 30px;
+    border-bottom: 3px solid #eee;
+    padding-bottom: 15px;
+    letter-spacing: 1px;
+}
+.album-subtitle{
+    font-size: 1.8rem;
+    color: #333;
+    margin: 40px 0 20px;
+    position: relative;
+    padding-left: 20px;
+}
+.album-subtitle::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 6px;
+    height: 24px;
+    background-color: #444;
+    border-radius: 3px;
+}
+/* 正文文本样式 - 添加album-前缀 */
+.album-text{
+    margin: 18px 0;
+    color: #444;
+    font-size: 1.15rem;
+    max-width: 1400px;
+}
+.song-list{
+    text-align: left;
+    margin: 25px 0 40px;
+    padding-left: 25px;
+    max-width: 1200px;
+}
+.song-list li {
+    margin: 15px 0;
+    color: #444;
+    font-size: 1.15rem;
+    transition: all 0.3s ease;
+    padding: 5px 0;
+}
+.song-list li:hover {
+    color: #000;
+    padding-left: 12px;
+    font-weight: 500;
+}
+.honor-list {
+    margin: 20px 0 40px;
+    padding-left: 25px;
+    max-width: 1400px;
+}
+.honor-list li {
+    margin: 18px 0;
+    color: #444;
+    font-size: 1.15rem;
+    list-style-type: disc;
+}
+
+
+/* 响应式调整 - 同步更新类名 */
+@media (max-width: 768px) {
+    .album-intro {
+        padding: 40px 5vw;
+    }
+    .album-title {
+        font-size: 2.2rem;
+    }
+    .album-subtitle {
+        font-size: 1.5rem;
+        margin: 30px 0 15px;
+    }
+    .album-text, .song-list li, .honor-list li {
+        font-size: 1.05rem;
+    }
+    .honor-list .indent {
+        margin-left: 30px;
+    }
+}
